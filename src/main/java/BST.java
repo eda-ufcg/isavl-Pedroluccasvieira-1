@@ -1,15 +1,24 @@
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.LinkedList;
-
+import java.util.*;
 public class BST {
 
     private Node root;
     private int size;
 
     public boolean isAVL() {
-        //TODO: implementar
-        return false;
+        return isAVL(this.root);
+    }
+
+    private boolean isAVL(Node node){
+        if (balance(node) >= -1 && balance(node) <=1){
+            return true;
+        }
+        else if (balance(node) < -1 || balance(node) >1){
+            return false;
+        }
+        return isAVL(node.left) && isAVL(node.right);
     }
 
     /**
@@ -17,7 +26,7 @@ public class BST {
      */
     public int height() {
         //TODO implementar
-        return -1;
+        return height(this.root);
     }
 
     /**
@@ -25,11 +34,13 @@ public class BST {
      * para recursão e para o balance.
      */
     private int height(Node node) {
-        return -1;
+        if (node == null) return -1;
+        return 1 + Math.max(height(node.left), height(node.right));
     }
 
     private int balance(Node node) {
-        return -1;
+        if (node != null) return height(node.left) - height(node.right);
+        return 0;
     }
 
     /**

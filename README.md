@@ -1,8 +1,8 @@
 # Identificação
 
-* Nome: 
-* Email (@ccc): 
-* Matrícula: 
+* Nome: Pedro Luccas Vieira Fernandes
+* Email (@ccc): pedro.luccas.vieira.fernandes@ccc.ufcg.edu.br
+* Matrícula: 122210495
 
 # Roteiro: isAVL
 
